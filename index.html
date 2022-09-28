@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		body{margin: 0; 
+			margin-top: 100px;
+			text-align: center; 
+			font-family: Andale Mono;
+			letter-spacing: -2px;
+			line-height: 130%;
+			background: url(room.jpg) ;}
+
+		.packThese{position: absolute;}
+
+		h1{font-size: 40px; color: white;}
+		h2{font-size: 40px; color: white;}
+		h3{font-size: 40px; color: white;}
+		h4{font-size: 20px; color: white;}
+		em{color: Chartreuse;}
+
+	</style>
+
+
+</head>
+<body>
+	<h1>It's time to go to school 😵</h1>
+	<h2>Let's pack up and get out in <em>10 seconds</em> !!!</h2>
+	<h3 id="timer">10초 남았다</h3>
+	<h4 id="now"></h4>
+
+	<script type="text/javascript">
+
+
+ 	const myInterval = setInterval(myTimer, 1000);
+	function myTimer() {
+  		const date = new Date();
+  		document.getElementById("now").innerHTML 
+  		= date.toLocaleTimeString();
+		}
+
+
+	var timeleft = 10;
+    var myTimer = setInterval(function()
+    			{
+                if(timeleft <= 0){
+                    clearInterval(myTimer);
+                    alert("YOU'RE LATE!");
+                    window.location.reload();
+                } else {
+                    document.getElementById("timer").innerHTML = 
+                    timeleft + "초 남았다";
+                }
+                timeleft -= 1;
+            }, 1000);
+
+
+
+
+	makePencil();
+			function makePencil(){
+				var a = document.createElement("img");
+				a.src = "pencil.png";
+				a.className = "packThese"
+				var b = Math.random()*window.innerWidth;
+				var c = Math.random()*window.innerHeight;
+				a.style.left = b + "px";
+				a.style.top = c + "px";
+				a.onclick = function(){
+					a.parentNode.removeChild(a);
+				}
+				document.body.appendChild(a);
+			}
+
+	makeBooks();
+			function makeBooks(){
+				var a = document.createElement("img");
+				a.src = "books.png";
+				a.className = "packThese"
+				var b = Math.random()*window.innerWidth;
+				var c = Math.random()*window.innerHeight;
+				a.style.left = b + "px";
+				a.style.top = c + "px";
+				a.onclick = function(){
+					a.parentNode.removeChild(a);
+				}
+				document.body.appendChild(a);
+			}
+
+	makeBagpack();
+			function makeBagpack(){
+				var a = document.createElement("img");
+				a.src = "bagpack.png";
+				a.className = "packThese"
+				var b = Math.random()*window.innerWidth;
+				var c = Math.random()*window.innerHeight;
+				a.style.left = b + "px";
+				a.style.top = c + "px";
+				a.onclick = function(){
+					a.parentNode.removeChild(a);
+				}
+				document.body.appendChild(a);
+			}
+
+	makeHeadphone();
+			function makeHeadphone(){
+				var a = document.createElement("img");
+				a.src = "headphone.png";
+				a.className = "packThese"
+				var b = Math.random()*window.innerWidth;
+				var c = Math.random()*window.innerHeight;
+				a.style.left = b + "px";
+				a.style.top = c + "px";
+				a.onclick = function(){
+					a.parentNode.removeChild(a);
+				}
+				document.body.appendChild(a);
+			}
+
+	makePhone();
+			function makePhone(){
+				var a = document.createElement("img");
+				a.src = "phone.png";
+				a.className = "packThese"
+				var b = Math.random()*window.innerWidth;
+				var c = Math.random()*window.innerHeight;
+				a.style.left = b + "px";
+				a.style.top = c + "px";
+				a.onclick = function(){
+					a.parentNode.removeChild(a);
+				}
+				document.body.appendChild(a);
+			}
+
+	makeMouse();
+			function makeMouse(){
+				var a = document.createElement("img");
+				a.src = "mouse.png";
+				a.className = "packThese"
+				var b = Math.random()*window.innerWidth;
+				var c = Math.random()*window.innerHeight;
+				a.style.left = b + "px";
+				a.style.top = c + "px";
+				a.onclick = function(){
+					a.parentNode.removeChild(a);
+				}
+				document.body.appendChild(a);
+			}
+
+	makeMacbook();
+			function makeMacbook(){
+				var a = document.createElement("img");
+				a.src = "macbook.png";
+				a.className = "packThese"
+				var b = Math.random()*window.innerWidth;
+				var c = Math.random()*window.innerHeight;
+				a.style.left = b + "px";
+				a.style.top = c + "px";
+				a.onclick = function(){
+					a.parentNode.removeChild(a);
+				}
+				document.body.appendChild(a);
+			}
+
+//7개 챙기면 클리어 창... 어떻게 하는지 모르겠음 ㅠㅠ
+
+
+
+	</script>
+
+</body>
+</html>
